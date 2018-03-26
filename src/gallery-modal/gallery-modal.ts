@@ -56,7 +56,7 @@ export class GalleryModal implements OnInit {
    * Closes the modal (when user click on CLOSE)
    */
   public dismiss() {
-    this.viewCtrl.dismiss();
+    this.viewCtrl.dismiss(undefined !== this.slider._activeIndex ? { activeIndex: this.slider._activeIndex } : undefined);
   }
 
   private resize(event) {
